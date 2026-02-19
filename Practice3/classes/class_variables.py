@@ -1,38 +1,29 @@
-# ex1: 
-class Animal:
-    def speak(self):
-        print("Sound")
 
-class Dog(Animal):
-    pass
+#ex1:
+class v1:
 
-d = Dog()
-d.speak()
+    def __init__(self):
+        v1.count += 1
 
+e1a = v1()
+e1b = v1()
+print(v1.count) 
 
-# ex2: 
-class Cat(Animal):
-    def speak(self):
-        print("Meow")
+#ex2
+class v2:
+    default_color = "blue"
 
-c = Cat()
-c.speak()
+print( v2.default_color) 
 
+#ex3
+class v3:
+    discount = 0.1
 
-# ex3: 
-class Bird(Animal):
-    def fly(self):
-        print("Flying")
+print( v3.discount)  
 
-b = Bird()
-b.speak()
-b.fly()
+# ex4 
+class v4:
+    school_name = "Sunrise High"
 
+print( v4.school_name) 
 
-# ex4: 
-class Fish(Animal):
-    def swim(self):
-        print("Swimming")
-
-f = Fish()
-f.swim()

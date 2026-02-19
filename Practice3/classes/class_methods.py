@@ -1,51 +1,42 @@
-# ex1: 
-class Person:
-    def say_hello(self):
-        print("Hello")
+#ex1
+class m1:
+    count = 0
 
-p = Person()
-p.say_hello()
+    def __init__(self):
+        m1.count += 1
 
+    @classmethod
+    def show_count(cls):
+        print(f"Ex1 - Total objects: {cls.count}")
 
-# ex2: 
-class School:
-    name = "ABC School"
+e1a = m1()
+e1b = m1()
+m1.show_count()
+#ex2
+class m2:
+    default_color = "blue"
 
+    @classmethod
+    def show_color(cls):
+        print(f"Ex2 - Default color: {cls.default_color}")
 
-    def show_name(cls):
-        print(cls.name)
+m2.show_color()
+#ex3
+class m3:
+    discount = 0.1
 
-School.show_name()
+    @classmethod
+    def show_discount(cls):
+        print(f"Ex3 - Discount: {cls.discount * 100}%")
 
+m3.show_discount()
+#ex4
+class m4:
+    school_name = "Sunrise High"
 
-# ex3: 
-class Math:
+    @classmethod
+    def show_school(cls):
+        print(f"Ex4 - School name: {cls.school_name}")
 
-    def add(a, b):
-        return a + b
-
-print(Math.add(2, 3))
-
-
-# ex4:
-class Example:
-    number = 10
-
-    def __init__(self, value):
-        self.value = value
-
-    def show_value(self):
-        print(self.value)
-
-
-    def show_number(cls):
-        print(cls.number)
-
-    def greet():
-        print("Hi!")
-
-e = Example(5)
-e.show_value()
-Example.show_number()
-Example.greet()
+m4.show_school()
 
