@@ -1,6 +1,7 @@
 
 #ex1:
 class v1:
+    count = 0
 
     def __init__(self):
         v1.count += 1
