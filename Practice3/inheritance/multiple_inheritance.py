@@ -43,11 +43,11 @@ print("------")
 
 #ex4
 class A:
-    def greet(self):
+    def greet1(self):
         print("Hello from A")
 
 class B:
-    def greet(self):
+    def greet2(self):
         print("Hello from B")
 
 class C(A, B):
@@ -55,5 +55,6 @@ class C(A, B):
         print("Hello from C")
 
 c = C()
-c.greet()
+c.greet1()
+c.greet2()
 
