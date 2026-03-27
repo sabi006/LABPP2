@@ -10,7 +10,7 @@ def get_connection():
         password=DB_CONFIG["password"]
     )
 
-# -------------------- Создание таблицы --------------------
+# Создание таблицы
 def create_table():
     conn = get_connection()
     cur = conn.cursor()
@@ -26,7 +26,7 @@ def create_table():
     conn.close()
     print("Table 'phonebook' is ready.")
 
-# -------------------- Добавление контакта --------------------
+# Добавление контакта 
 def add_contact(name, phone):
     conn = get_connection()
     cur = conn.cursor()
@@ -40,14 +40,14 @@ def add_contact(name, phone):
     conn.close()
     print(f"Added contact: {name} - {phone}")
 
-# -------------------- Загрузка контактов из CSV --------------------
+#  Загрузка контактов из CSV 
 def load_from_csv(csv_file):
     with open(csv_file, newline='', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
             add_contact(row['name'], row['phone'])
 
-# -------------------- Показ всех контактов --------------------
+#  Показ всех контактов
 def show_contacts():
     conn = get_connection()
     cur = conn.cursor()
@@ -57,7 +57,7 @@ def show_contacts():
     conn.close()
     return rows
 
-# -------------------- Основной запуск --------------------
+# Основной запуск
 if __name__ == "__main__":
     create_table()
     load_from_csv("contacts.csv")
