@@ -3,16 +3,24 @@ from connect import connect
 def search_contacts():
     pattern = input("Enter search pattern: ")
     conn = connect()
+    if not conn:
+        return
+
     cur = conn.cursor()
+    try:
+        cur.execute("SELECT * FROM get_contacts_by_pattern(%s);", (pattern,))
+        rows = cur.fetchall()
 
-    cur.execute("SELECT * FROM get_contacts_by_pattern(%s)", (pattern,))
-    rows = cur.fetchall()
-
-    for row in rows:
-        print(row)
-
-    cur.close()
-    conn.close()
+        if not rows:
+            print("No contacts found.")
+        else:
+            for row in rows:
+                print(f"Name: {row[0]}, Phone: {row[1]}")
+    except Exception as e:
+        print("Error:", e)
+    finally:
+        cur.close()
+        conn.close()
 
 
 def add_contact():
@@ -20,13 +28,19 @@ def add_contact():
     phone = input("Enter phone: ")
 
     conn = connect()
+    if not conn:
+        return
+
     cur = conn.cursor()
-
-    cur.execute("CALL upsert_contact(%s, %s)", (name, phone))
-    conn.commit()
-
-    cur.close()
-    conn.close()
+    try:
+        cur.execute("CALL upsert_contact(%s, %s);", (name, phone))
+        conn.commit()
+        print("Contact added/updated successfully.")
+    except Exception as e:
+        print("Error:", e)
+    finally:
+        cur.close()
+        conn.close()
 
 
 def delete_contact():
@@ -37,13 +51,19 @@ def delete_contact():
     phone = phone if phone else None
 
     conn = connect()
+    if not conn:
+        return
+
     cur = conn.cursor()
-
-    cur.execute("CALL delete_contact(%s, %s)", (name, phone))
-    conn.commit()
-
-    cur.close()
-    conn.close()
+    try:
+        cur.execute("CALL delete_contact(%s, %s);", (name, phone))
+        conn.commit()
+        print("Contact deleted.")
+    except Exception as e:
+        print("Error:", e)
+    finally:
+        cur.close()
+        conn.close()
 
 
 def paginate_contacts():
@@ -51,16 +71,24 @@ def paginate_contacts():
     offset = int(input("Enter offset: "))
 
     conn = connect()
+    if not conn:
+        return
+
     cur = conn.cursor()
+    try:
+        cur.execute("SELECT * FROM get_contacts_paginated(%s, %s);", (limit, offset))
+        rows = cur.fetchall()
 
-    cur.execute("SELECT * FROM get_contacts_paginated(%s, %s)", (limit, offset))
-    rows = cur.fetchall()
-
-    for row in rows:
-        print(row)
-
-    cur.close()
-    conn.close()
+        if not rows:
+            print("No contacts found.")
+        else:
+            for row in rows:
+                print(f"Name: {row[0]}, Phone: {row[1]}")
+    except Exception as e:
+        print("Error:", e)
+    finally:
+        cur.close()
+        conn.close()
 
 
 def main():
@@ -83,6 +111,7 @@ def main():
         elif choice == "4":
             paginate_contacts()
         elif choice == "0":
+            print("Goodbye!")
             break
         else:
             print("Invalid choice")
