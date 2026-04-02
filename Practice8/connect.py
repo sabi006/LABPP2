@@ -5,7 +5,7 @@ DB_CONFIG = {
     "database": "phonebook_db",
     "user": "postgres",
     "password": "23455432",
-    "port": 5432  # добавил порт, если используется стандартный
+    "port": 5432  
 }
 
 def connect():
