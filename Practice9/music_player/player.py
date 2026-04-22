@@ -25,7 +25,9 @@ class MusicPlayer:
     def current_track_name(self):
         if not self.playlist:
             return "No tracks found"
-        return os.path.basename(self.playlist[self.current_index])
+
+        name = os.path.basename(self.playlist[self.current_index])
+        return os.path.splitext(name)[0]   # ❌ removes .mp3
 
     def play(self):
         if not self.playlist:
@@ -42,7 +44,7 @@ class MusicPlayer:
         pygame.mixer.music.stop()
         pygame.mixer.music.unload()
         self.is_playing = False
-        self.manual_change = True  
+        self.manual_change = True
 
     def next_track(self):
         if not self.playlist:
