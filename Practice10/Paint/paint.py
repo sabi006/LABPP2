@@ -179,6 +179,16 @@ def main():
                     current_color = GREEN
                 elif event.key == pygame.K_4:
                     current_color = BLUE
+                elif event.key == pygame.K_4:
+                    current_color = BLUE
+                elif event.key == pygame.K_4:
+                    current_color = BLUE
+                elif event.key == pygame.K_5:
+                    current_color = PURPLE
+                elif event.key == pygame.K_6:
+                    current_color = ORANGE
+
+
 
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 mx, my = event.pos
