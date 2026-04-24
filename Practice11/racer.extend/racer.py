@@ -227,7 +227,7 @@ def reset_game(level_name):
 
     return {
         "player_x": lanes[1] - 20,
-        "player_y": HEIGHT - 100,
+        "player_y": HEIGHT - 100,  
 
         "enemies": enemies,
 
