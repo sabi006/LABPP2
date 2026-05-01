@@ -1,6 +1,6 @@
 {
     "sound": true,
-    "car_color": "blue",
+    "car_color": "red",
     "car_skin": 3,
-    "difficulty": "normal"
+    "difficulty": "easy"
 }

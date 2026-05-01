@@ -5,7 +5,7 @@ import pygame
 
 # -------------------- BASIC GAME SETTINGS --------------------
 WIDTH, HEIGHT = 500, 800
-FPS = 120
+FPS = 80
 ROAD_LEFT = 120
 ROAD_RIGHT = 380
 LANES = [ROAD_LEFT + 40, (ROAD_LEFT + ROAD_RIGHT) // 2, ROAD_RIGHT - 40]
@@ -26,9 +26,9 @@ CAR_COLORS = {
 }
 
 DIFFICULTY = {
-    "easy": {"enemy": 4, "spawn": 70, "road": 4, "event": 900},
-    "normal": {"enemy": 5, "spawn": 55, "road": 5, "event": 750},
-    "hard": {"enemy": 7, "spawn": 42, "road": 6, "event": 620},
+    "easy": {"enemy": 5, "spawn": 90, "road": 4, "event": 1000},
+    "normal": {"enemy": 6, "spawn": 75, "road": 5, "event": 850},
+    "hard": {"enemy": 7, "spawn": 60, "road": 6, "event": 700},
 }
 
 

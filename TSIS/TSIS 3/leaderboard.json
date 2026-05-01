@@ -6,10 +6,34 @@
         "coins": 38
     },
     {
+        "name": "\u043b\u0434\u0436\u043b",
+        "score": 1258,
+        "distance": 1836,
+        "coins": 48
+    },
+    {
+        "name": "mk",
+        "score": 1112,
+        "distance": 1479,
+        "coins": 39
+    },
+    {
         "name": "\u043f\u043a\u043f\u043a",
         "score": 834,
         "distance": 1097,
         "coins": 32
+    },
+    {
+        "name": "\u044e/\u0431",
+        "score": 753,
+        "distance": 1169,
+        "coins": 19
+    },
+    {
+        "name": "iji",
+        "score": 733,
+        "distance": 1118,
+        "coins": 28
     },
     {
         "name": "sabi",
@@ -18,45 +42,21 @@
         "coins": 23
     },
     {
-        "name": "\u044b\u0444\u0438\u0448",
-        "score": 556,
-        "distance": 912,
-        "coins": 18
+        "name": "\u0431\u0442\u0431",
+        "score": 711,
+        "distance": 836,
+        "coins": 32
     },
     {
-        "name": "\u0434\u0431\u0436\u044e\u044d",
-        "score": 496,
-        "distance": 697,
+        "name": "\u044c\u0438",
+        "score": 644,
+        "distance": 1254,
         "coins": 16
     },
     {
-        "name": "\u0449\u0449",
-        "score": 350,
-        "distance": 415,
-        "coins": 14
-    },
-    {
-        "name": "\u0444\u044b\u0440\u0444\u044b\u0444",
-        "score": 345,
-        "distance": 494,
-        "coins": 13
-    },
-    {
-        "name": "\u043b\u0434\u044c",
-        "score": 277,
-        "distance": 365,
-        "coins": 14
-    },
-    {
-        "name": "\u043b\u044c\u0434\u0431\u0436\u044d",
-        "score": 184,
-        "distance": 332,
-        "coins": 6
-    },
-    {
-        "name": "\u043e\u043b\u0434\u0436\u044d",
-        "score": 157,
-        "distance": 178,
-        "coins": 4
+        "name": "\u043b\u0442",
+        "score": 562,
+        "distance": 1301,
+        "coins": 8
     }
 ]
